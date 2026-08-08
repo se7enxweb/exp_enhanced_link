@@ -1,0 +1,34 @@
+{
+    "name": "se7enxweb/exp_enhanced_link",
+    "description": "Enhanced Link eZ4 datatype for Exponential 6.x, ported from the Netgen Ibexa field type.",
+    "type": "ezpublish-legacy-extension",
+    "keywords": [
+        "Exponential",
+        "eZPublish",
+        "eZ4",
+        "datatype",
+        "enhanced link",
+        "link",
+        "ngenhancedlink"
+    ],
+    "homepage": "https://se7enx.com",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "7x",
+            "homepage": "https://se7enx.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.1 || ^8.2 || ^8.3 || ^8.4",
+        "ext-json": "*",
+        "se7enxweb/exponential-legacy-installer": "*"
+    },
+    "suggest": {
+        "ext-intl": "Used by eZLocale and i18n helpers in the admin interface"
+    },
+    "extra": {
+        "ezpublish-legacy-extension-name": "exp_enhanced_link"
+    }
+}
