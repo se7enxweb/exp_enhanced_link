@@ -12,7 +12,8 @@ class ngEnhancedLinkType extends eZDataType
     {
         parent::__construct( self::DATA_TYPE_STRING,
                              ezpI18n::tr( 'kernel/classes/datatypes', 'Enhanced Link', 'Datatype name' ),
-                             array( 'serialize_supported' => true ) );
+                             array( 'serialize_supported' => true,
+                                    'object_serialize_map' => array( 'data_text' => 'text' ) ) );
     }
 
     public function initializeObjectAttribute( $contentObjectAttribute, $currentVersion, $originalContentObjectAttribute )
