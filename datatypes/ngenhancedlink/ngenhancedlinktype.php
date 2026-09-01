@@ -129,6 +129,32 @@ class ngEnhancedLinkType extends eZDataType
         }
     }
 
+    public function serializeContentClassAttribute( $classAttribute, $attributeNode, $attributeParametersNode )
+    {
+        $settings = (string) $classAttribute->attribute( self::SETTINGS_FIELD );
+        if ( $settings === '' )
+            return;
+
+        $dom = $attributeParametersNode->ownerDocument;
+        $settingsNode = $dom->createElement( 'settings' );
+        $settingsNode->appendChild( $dom->createTextNode( $settings ) );
+        $attributeParametersNode->appendChild( $settingsNode );
+    }
+
+    public function unserializeContentClassAttribute( $classAttribute, $attributeNode, $attributeParametersNode )
+    {
+        $domNodes = $attributeParametersNode->getElementsByTagName( 'settings' );
+        if ( $domNodes->length > 0 )
+        {
+            $settings = trim( $domNodes->item( 0 )->textContent );
+            if ( $settings !== '' )
+            {
+                $classAttribute->setAttribute( self::SETTINGS_FIELD, $settings );
+                $classAttribute->store();
+            }
+        }
+    }
+
     public function storeObjectAttribute( $contentObjectAttribute )
     {
         $data = $this->decodeValue( $contentObjectAttribute );
