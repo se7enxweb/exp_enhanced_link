@@ -1,7 +1,7 @@
 <?php
 //
 // exp_enhanced_link - 7x Enhanced Link eZ4 datatype
-// Copyright (C) 1998 - 2026 7x. All rights reserved.
+// Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@ class exp_enhanced_linkInfo
     {
         return array( 'Name' => "Exponential Enhanced Link",
                       'Version' => "1.0.9",
-                      'Copyright' => "Copyright (C) 1998 - 2026 7x. All rights reserved.",
+                      'Copyright' => "Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.",
                       'License' => "GNU General Public License v2.0 (or any later version)",
                       'Info_url' => "https://github.com/se7enxweb/exp_enhanced_link" );
     }
