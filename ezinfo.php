@@ -14,7 +14,7 @@ class exp_enhanced_linkInfo
     public static function info()
     {
         return array( 'Name' => "Exponential Enhanced Link",
-                      'Version' => "1.0.9",
+                      'Version' => "1.0.10",
                       'Copyright' => "Copyright (C) 1998 - 2026 Exponential Foundation and 7x. All rights reserved.",
                       'License' => "GNU General Public License v2.0 (or any later version)",
                       'Info_url' => "https://github.com/se7enxweb/exp_enhanced_link" );
